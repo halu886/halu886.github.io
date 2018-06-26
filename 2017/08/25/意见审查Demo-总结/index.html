@@ -3,18 +3,22 @@
 <head>
   <meta charset="utf-8">
   
+
+  
   <title>意见审查Demo 总结 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术说明 mongodb nodejs express webix mongodb  一张用户表user,一张数据表idea（意见）。 //user表数据字段 userName: String,//用户名称 password: String //登入密码 idea表数据字段 productType: String, //产品类型 headLine: String,  //标题 phoneNum:">
+  <meta name="description" content="技术说明 mongodb nodejs webix     技术说明mongodb一张用户表user,一张数据表idea（意见）。 //user表数据字段 userName: String,//用户名称 password: String //登入密码 idea表数据字段 productType: String, //产品类型 headLine: String,  //标题 phoneNum:">
+<meta name="keywords" content="node,mongodb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="意见审查Demo 总结">
 <meta property="og:url" content="http://yoursite.com/2017/08/25/意见审查Demo-总结/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="技术说明 mongodb nodejs express webix mongodb  一张用户表user,一张数据表idea（意见）。 //user表数据字段 userName: String,//用户名称 password: String //登入密码 idea表数据字段 productType: String, //产品类型 headLine: String,  //标题 phoneNum:">
-<meta property="og:updated_time" content="2017-08-26T08:12:17.578Z">
+<meta property="og:description" content="技术说明 mongodb nodejs webix     技术说明mongodb一张用户表user,一张数据表idea（意见）。 //user表数据字段 userName: String,//用户名称 password: String //登入密码 idea表数据字段 productType: String, //产品类型 headLine: String,  //标题 phoneNum:">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-26T12:00:38.919Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="意见审查Demo 总结">
-<meta name="twitter:description" content="技术说明 mongodb nodejs express webix mongodb  一张用户表user,一张数据表idea（意见）。 //user表数据字段 userName: String,//用户名称 password: String //登入密码 idea表数据字段 productType: String, //产品类型 headLine: String,  //标题 phoneNum:">
+<meta name="twitter:description" content="技术说明 mongodb nodejs webix     技术说明mongodb一张用户表user,一张数据表idea（意见）。 //user表数据字段 userName: String,//用户名称 password: String //登入密码 idea表数据字段 productType: String, //产品类型 headLine: String,  //标题 phoneNum:">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -25,8 +29,6 @@
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <link rel="stylesheet" href="/css/style.css">
-  
-
 </head>
 
 <body>
@@ -54,7 +56,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -66,7 +68,7 @@
         <section id="main"><article id="post-意见审查Demo-总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/25/意见审查Demo-总结/" class="article-date">
-  <time datetime="2017-08-25T06:08:51.000Z" itemprop="datePublished">2017-08-25</time>
+  <time datetime="2017-08-25T11:48:16.000Z" itemprop="datePublished">2017-08-25</time>
 </a>
     
   </div>
@@ -85,14 +87,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="技术说明"><a href="#技术说明" class="headerlink" title="技术说明"></a>技术说明</h2><ol>
+        <!-- TOC -->
+<ul>
+<li><a href="#技术说明">技术说明</a><ul>
 <li><a href="#mongodb">mongodb</a></li>
 <li><a href="#nodejs">nodejs</a></li>
-<li><a href="#express">express</a></li>
-<li><a href="#webix">webix</a><!-- <h3 id="headLine1">mongodb</h3> -->
-<h3 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h3></li>
-</ol>
-<p>一张用户表user,一张数据表idea（意见）。</p>
+<li><a href="#webix">webix</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h1 id="技术说明"><a href="#技术说明" class="headerlink" title="技术说明"></a>技术说明</h1><h2 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h2><p>一张用户表user,一张数据表idea（意见）。</p>
 <pre><code>//user表数据字段
 userName: String,//用户名称
 password: String //登入密码
@@ -107,20 +112,20 @@ replyDate: Date,    //回复日期
 fileName: Array,    //图片名称
 filePath: Array,    //文件路径
 user_id: String    //引用用户ID
-</code></pre><p><strong>mongodb 对象的操作用了mongoose模块封装了CURD操作</strong></p>
-<h3 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h3><p>基于node.js中express模块搭建http服务<br>监听本地localhost：3000端口访问</p>
-<p><strong>使用express4.x中的router中间件将请求分离成/user/<em>以及/idea/</em>.<br>将app.js中的请求转移到了./router/index.js</strong></p>
+</code></pre><p>mongodb 对象的操作用了mongoose模块封装了CURD操作</p>
+<h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><p>基于node.js中express模块搭建http服务<br>监听本地localhost：3000端口访问</p>
+<p><strong>使用express4.x中的router中间件将请求分离成/user/以及/idea/.<br>将app.js中的请求转移到了./router/index.js</strong></p>
 <pre><code>module.exports=function(app) {
         /**主界面 */
             app.get(&apos;/&apos;,index);//主页面请求
             app.use(&apos;/user&apos;,user);//用户模块
             app.use(&apos;/idea&apos;,idea);//意见模块
         }
-</code></pre><p>在app.js只需要调用./router/index模块，就可以减少主界面请求的代码量<br>    var index = require（./router/index）;<br>    index(app);</p>
-<p><strong>分别封装user和idea业务逻辑在模块中实例化</strong><br><strong>express.router对象 ./router/idea.js ./router/idea.js</strong></p>
-<p><code>var router=require(&quot;express&quot;).Router();</code></p>
-<p><strong>在对外开放router对象</strong><br>    module.exports=router;</p>
-<p><strong>mongoose封装对于对象的CURD操作</strong><br><strong>首先我先封装db数据库连接对象的创建</strong><br>    var mongoose=require(‘mongoose’);<br>    var url=’mongodb://localhost:27017/demo’;<br>    mongoose.connect(url);//连接<br>    module.exports=mongoose;</p>
+</code></pre><p>在app.js只需要调用./router/index模块，就可以减少主界面请求的代码量<br><code></code>var index = require（./router/index）;<br>index(app);</p>
+<p><strong>分别封装user和idea业务逻辑在模块中实例化express.router对象 ./router/idea.js ./router/idea.js</strong></p>
+<pre><code>var router=require(&quot;express&quot;).Router();
+</code></pre><p><strong>在对外开放router对象</strong><br>    module.exports=router;</p>
+<p><strong>mongoose封装对于对象的CURD操作<br>首先我先封装db数据库连接对象的创建</strong><br>    var mongoose=require(‘mongoose’);<br>    var url=’mongodb://localhost:27017/demo’;<br>    mongoose.connect(url);//连接<br>    module.exports=mongoose;</p>
 <p>通过mongoose中封装好的scheme对象将我们数据字段封装好，通过model对象实例化，再导出包含一系列查询以及增加删除等等的操作的对象，简直就是开箱即用。</p>
 <pre><code>var mongoose=require(&apos;./mongoose&apos;);
 var ideaSchema=new mongoose.Schema({   //Schema对象封装
@@ -130,15 +135,17 @@ var ideaSchema=new mongoose.Schema({   //Schema对象封装
 //idea对应的mongodb中的collection，传入Schema对象，将返回model对象对外开放
 
 module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
-</code></pre><h3 id="webix"><a href="#webix" class="headerlink" title="webix"></a>webix</h3><p><strong>在ejs渲染引擎下使用webix控件</strong></p>
-<p><code>这一部份代码讲道理写得我有点蒙 = =</code><br><code>ejs通过渲染表达式动态传递值或者对html页面进行一些操作</code><br><code>然而webix就是通过封装控件，在js中传递json对象进行构造html中的节点</code><br><code>公司当时说要webix，我又脑子抽到了不愿意舍弃ejs（简直有毒，在这个demo里ejs的唯一作用就是将我conter内容整合到layout里面）。</code><br><code>为了能让ejs稍微有点作用，我在layout界面中写了构建页面中比较不容易改动的top和footer部分。</code><br><code>对你没想错，写在html内置的js中的，然后从不同的界面中传进去各自内置的js（因为webix主要的优势就是让你不用写html代码），所以ejs``最后整合到的一起的页面就是两个不同js脚本。感觉ejs在我这里基本没有作用</code><br><code>前端主要就是通过不同的控件构造一个个不同的页面加上一些按钮的触发事件发送webix中封装的ajax提交请求</code><br><code>代码我就不贴了，源码链接我也放出来了，有兴趣就自己去看看吧</code></p>
+</code></pre><h2 id="webix"><a href="#webix" class="headerlink" title="webix"></a>webix</h2><p><strong>在ejs渲染引擎下使用webix控件</strong></p>
+<p><em>这一部份代码讲道理写得我有点蒙 = =<br>ejs通过渲染表达式动态传递值或者对html页面进行一些操作<br>然而webix就是通过封装控件，在js中传递json对象进行构造html中的节点<br>公司当时说要webix，我又脑子抽到了不愿意舍弃ejs（简直有毒，在这个demo里ejs的唯一作用就是将我conter内容整合到layout里面）。<br>为了能让ejs稍微有点作用，我在layout界面中写了构建页面中比较不容易改动的top和footer部分。<br>对你没想错，写在html内置的js中的，然后从不同的界面中传进去各自内置的js（因为webix主要的优势就是让你不用写html代码），所以ejs<code></code>最后整合到的一起的页面就是两个不同js脚本。感觉ejs在我这里基本没有作用<br>前端主要就是通过不同的控件构造一个个不同的页面加上一些按钮的触发事件发送webix中封装的ajax提交请求<br>代码我就不贴了，源码链接我也放出来了，有兴趣就自己去看看吧</em></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/08/25/意见审查Demo-总结/" data-id="cj6sri9n300010swg07huuu6z" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/08/25/意见审查Demo-总结/" data-id="cjivmngas0000akhnrw6lh1hn" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+
     </footer>
   </div>
   
@@ -147,7 +154,7 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
   
   
     <a href="/2017/08/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ouder</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Hello World</div>
     </a>
   
@@ -164,13 +171,27 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/node/" style="font-size: 10px;">node</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li></ul>
     </div>
@@ -180,7 +201,7 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -204,7 +225,7 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
+      &copy; 2018 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -227,6 +248,8 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
 
 
 <script src="/js/script.js"></script>
+
+
 
   </div>
 </body>
