@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>halu886`blog</title>
+  
+  <subtitle>天道酬勤</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-06-26T12:00:38.919Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>halu886</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>意见审查Demo 总结</title>
+    <link href="http://yoursite.com/2017/08/25/%E6%84%8F%E8%A7%81%E5%AE%A1%E6%9F%A5Demo-%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/08/25/意见审查Demo-总结/</id>
+    <published>2017-08-25T11:48:16.000Z</published>
+    <updated>2018-06-26T12:00:38.919Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- TOC --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#技术说明&quot;&gt;技术说明&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#mongodb&quot;&gt;mongodb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#nodejs&quot;&gt;nodejs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="node" scheme="http://yoursite.com/tags/node/"/>
+    
+      <category term="mongodb" scheme="http://yoursite.com/tags/mongodb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/08/24/hello-world/"/>
+    <id>http://yoursite.com/2017/08/24/hello-world/</id>
+    <published>2017-08-24T11:48:16.000Z</published>
+    <updated>2018-06-26T12:01:42.874Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

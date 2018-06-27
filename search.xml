@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>JavaScript原生函数浅谈</title>
+      <link href="/2018/06/26/JavaScript%E5%8E%9F%E7%94%9F%E5%87%BD%E6%95%B0%E6%B5%85%E8%B0%88/"/>
+      <url>/2018/06/26/JavaScript%E5%8E%9F%E7%94%9F%E5%87%BD%E6%95%B0%E6%B5%85%E8%B0%88/</url>
+      <content type="html"><![CDATA[<blockquote><p><strong>该文章阅读需要8分钟,更多文章请点击本人博客<a href="https://halu886.github.io/" target="_blank" rel="noopener">halu886</a></strong></p></blockquote><hr><!-- TOC --><ul><li><a href="#1原生函数基本概念">1.原生函数基本概念</a><ul><li><a href="#11原生函数是什么">1.1原生函数是什么</a></li><li><a href="#12作用是什么">1.2作用是什么</a></li><li><a href="#13补充">1.3补充</a></li></ul></li><li><a href="#2\\class\\">2.[[<strong>class</strong>]]</a></li><li><a href="#3封装对象包装">3.封装对象包装</a></li><li><a href="#4拆封">4.拆封</a></li></ul><!-- /TOC --><h1 id="1-原生函数基本概念"><a href="#1-原生函数基本概念" class="headerlink" title="1.原生函数基本概念"></a>1.原生函数基本概念</h1><h2 id="1-1原生函数是什么"><a href="#1-1原生函数是什么" class="headerlink" title="1.1原生函数是什么"></a>1.1原生函数是什么</h2><p><strong>JavaScript为基本数据类型提供了封装对象,被称为原生函数(native function),同时也叫内建函数(built-in function)</strong>  </p><p>常用的原生函数有:</p><ul><li>Number()</li><li>String()</li><li>Boolean()</li><li>Array()</li><li>Object()</li><li>Function()</li><li>RegExp()</li><li>Date()</li><li>Error()</li><li>Symbol()//ES6新加入!   </li></ul><h2 id="1-2作用是什么"><a href="#1-2作用是什么" class="headerlink" title="1.2作用是什么"></a>1.2作用是什么</h2><p><strong>为基本数据类型提供该子类所特有的方法和属性</strong>  </p><pre><code>比如说:String#trim(),Array#Array#concat()  </code></pre><h2 id="1-3补充"><a href="#1-3补充" class="headerlink" title="1.3补充"></a>1.3补充</h2><p>原生函数同时也能当做构造函数使用  </p><pre><code>let a = new String(&quot;abc&quot;);a instanceof String;//true</code></pre><p>通过构造函数创建了一个封装了基本数据类型的封装对象</p><h1 id="2-class"><a href="#2-class" class="headerlink" title="2.[[class]]"></a>2.[[<strong>class</strong>]]</h1><pre><code>let a = new String(&quot;abc&quot;);typeof a;//&quot;object&quot; </code></pre><p><strong>所有typeof返回的”object”的对象都有一个[[class]]属性</strong>  </p><pre><code>Object.prototype.toString.call(new String(&quot;abc&quot;));//&quot;[object String]&quot;Object.prototype.toString.call(new Number(1346));//&quot;[object Number]&quot;Object.prototype.toString.call(null);//&quot;[object Null]&quot;Object.prototype.toString.call(undefined);//&quot;[object Undefined]&quot;//返回一个字符串类型的基本类型数据,格式为[object Xxxxx]</code></pre><p>虽然不存在Null()和Undefined()原生函数,但是[[Class]]内部属性仍为这个</p><h1 id="3-封装对象包装"><a href="#3-封装对象包装" class="headerlink" title="3.封装对象包装"></a>3.封装对象包装</h1><p><strong>当基本数据类型需要调用原生对象的方法和属性时,JavaScript会自动进行对象封装(object wrapper)</strong>  </p><p><strong>疑问:既然如此为什么不直接在变量声明时,直接定义为封装对象?</strong></p><p><strong>思考:</strong></p><ol><li>JavaScript对基本数据类型的常见情况做了性能优化,直接使用封装对象来进行”<em>提前优化</em>“反而会降低执行效率</li><li><p>篡改数据类型,提升风险  </p><pre><code>let a = false;!!false;//falselet b = new Boolean(false);!!b;//true  //显性类型转换!!Object===&gt;true  </code></pre></li></ol><h1 id="4-拆封"><a href="#4-拆封" class="headerlink" title="4.拆封"></a>4.拆封</h1><p><strong>当需要用到封装对象的基本类型值时,就需要用到valueOf()</strong>  </p><pre><code>var a = new String(&quot;sadflk&quot;);var b = new Number(123);var c = new Boolean(true);a.valueOf()//&quot;sadflf&quot;b.valueOf()//123c.valueOf()//true</code></pre><p><strong>在需要用到基本类型值的时候会发生隐形拆封</strong></p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> 阅后总结 </tag>
+            
+            <tag> 你不知道的JavaScript(中卷) </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>意见审查Demo 总结</title>
+      <link href="/2017/08/25/%E6%84%8F%E8%A7%81%E5%AE%A1%E6%9F%A5Demo-%E6%80%BB%E7%BB%93/"/>
+      <url>/2017/08/25/%E6%84%8F%E8%A7%81%E5%AE%A1%E6%9F%A5Demo-%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<!-- TOC --><ul><li><a href="#技术说明">技术说明</a><ul><li><a href="#mongodb">mongodb</a></li><li><a href="#nodejs">nodejs</a></li><li><a href="#webix">webix</a></li></ul></li></ul><!-- /TOC --><h1 id="技术说明"><a href="#技术说明" class="headerlink" title="技术说明"></a>技术说明</h1><h2 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h2><p>一张用户表user,一张数据表idea（意见）。</p><pre><code>//user表数据字段userName: String,//用户名称password: String //登入密码idea表数据字段productType: String, //产品类型headLine: String,  //标题phoneNum: String,  //联系方式status: String,    //状态 已回复/未回复/已完成reply: String,      //回复publishDate: Date,  //发布日期replyDate: Date,    //回复日期fileName: Array,    //图片名称filePath: Array,    //文件路径user_id: String    //引用用户ID</code></pre><p>mongodb 对象的操作用了mongoose模块封装了CURD操作</p><h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><p>基于node.js中express模块搭建http服务<br>监听本地localhost：3000端口访问</p><p><strong>使用express4.x中的router中间件将请求分离成/user/以及/idea/.<br>将app.js中的请求转移到了./router/index.js</strong></p><pre><code>module.exports=function(app) {        /**主界面 */            app.get(&apos;/&apos;,index);//主页面请求            app.use(&apos;/user&apos;,user);//用户模块            app.use(&apos;/idea&apos;,idea);//意见模块        }</code></pre><p>在app.js只需要调用./router/index模块，就可以减少主界面请求的代码量<br><code></code>var index = require（./router/index）;<br>index(app);</p><p><strong>分别封装user和idea业务逻辑在模块中实例化express.router对象 ./router/idea.js ./router/idea.js</strong></p><pre><code>var router=require(&quot;express&quot;).Router();</code></pre><p><strong>在对外开放router对象</strong><br>    module.exports=router;</p><p><strong>mongoose封装对于对象的CURD操作<br>首先我先封装db数据库连接对象的创建</strong><br>    var mongoose=require(‘mongoose’);<br>    var url=’mongodb://localhost:27017/demo’;<br>    mongoose.connect(url);//连接<br>    module.exports=mongoose;</p><p>通过mongoose中封装好的scheme对象将我们数据字段封装好，通过model对象实例化，再导出包含一系列查询以及增加删除等等的操作的对象，简直就是开箱即用。</p><pre><code>var mongoose=require(&apos;./mongoose&apos;);var ideaSchema=new mongoose.Schema({   //Schema对象封装        /* idea数据字段*/});//idea对应的mongodb中的collection，传入Schema对象，将返回model对象对外开放module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)</code></pre><h2 id="webix"><a href="#webix" class="headerlink" title="webix"></a>webix</h2><p><strong>在ejs渲染引擎下使用webix控件</strong></p><p><em>这一部份代码讲道理写得我有点蒙 = =<br>ejs通过渲染表达式动态传递值或者对html页面进行一些操作<br>然而webix就是通过封装控件，在js中传递json对象进行构造html中的节点<br>公司当时说要webix，我又脑子抽到了不愿意舍弃ejs（简直有毒，在这个demo里ejs的唯一作用就是将我conter内容整合到layout里面）。<br>为了能让ejs稍微有点作用，我在layout界面中写了构建页面中比较不容易改动的top和footer部分。<br>对你没想错，写在html内置的js中的，然后从不同的界面中传进去各自内置的js（因为webix主要的优势就是让你不用写html代码），所以ejs<code></code>最后整合到的一起的页面就是两个不同js脚本。感觉ejs在我这里基本没有作用<br>前端主要就是通过不同的控件构造一个个不同的页面加上一些按钮的触发事件发送webix中封装的ajax提交请求<br>代码我就不贴了，源码链接我也放出来了，有兴趣就自己去看看吧</em></p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> node </tag>
+            
+            <tag> mongodb </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2017/08/24/hello-world/"/>
+      <url>/2017/08/24/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+    </entry>
+    
+  
+  
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+  
+</search>
