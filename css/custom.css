@@ -4,3 +4,7 @@
 .container {
   font: 18px "Roboto", "Noto Sans", Helvetica, Arial, sans-serif;
 }
+.comments .commentjs img {
+  width: 52.8px;
+  height: 52.8px;
+}
