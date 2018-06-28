@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-28T07:11:30.617Z</updated>
+  <updated>2018-06-28T07:38:56.682Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/06/28/%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2018/06/28/实习总结/</id>
     <published>2018-06-28T01:18:32.000Z</published>
-    <updated>2018-06-28T07:11:30.617Z</updated>
+    <updated>2018-06-28T07:38:56.682Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,10 @@
       
     
     </summary>
+    
+      <category term="工作" scheme="http://yoursite.com/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+      <category term="经验总结" scheme="http://yoursite.com/categories/%E5%B7%A5%E4%BD%9C/%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/"/>
     
     
       <category term="个人" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA/"/>
@@ -50,7 +54,7 @@
     <link href="http://yoursite.com/2017/08/25/%E6%84%8F%E8%A7%81%E5%AE%A1%E6%9F%A5Demo-%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2017/08/25/意见审查Demo-总结/</id>
     <published>2017-08-25T11:48:16.000Z</published>
-    <updated>2018-06-26T12:00:38.919Z</updated>
+    <updated>2018-06-28T07:37:58.908Z</updated>
     
     <summary type="html">
     
@@ -68,6 +72,10 @@
       
     
     </summary>
+    
+      <category term="node" scheme="http://yoursite.com/categories/node/"/>
+    
+      <category term="demo" scheme="http://yoursite.com/categories/node/demo/"/>
     
     
       <category term="node" scheme="http://yoursite.com/tags/node/"/>

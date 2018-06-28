@@ -8,6 +8,14 @@
       <url>/2018/06/28/%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<blockquote><p><strong>该文章阅读需要12分钟,更多文章请点击本人博客<a href="https://halu886.github.io/" target="_blank" rel="noopener">halu886</a></strong></p></blockquote><hr><!-- TOC --><ul><li><a href="#工作">工作</a><ul><li><a href="#输出">输出</a></li><li><a href="#反思与总结">反思与总结</a><ul><li><a href="#反思">反思</a></li><li><a href="#总结">总结</a></li></ul></li><li><a href="#未来展望">未来展望</a></li></ul></li></ul><!-- /TOC --><h1 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h1><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p><img src="/images/工作输出.png" alt="季度输出"></p><p>表格中大致汇总了实习期间一年下来的在公司所埋得坑:-)  </p><p>工作期间虽然走过很多弯路,被领导diss了不少次,但所幸自己成长的速度还算更上进度而且也稍微达到了预期的一部分:-)</p><p>在实习期间主要是在大eAudit项目组中担任前后端的开发.也支援过common模块和PQM模块,同时还本着”<em>机会是留给敢背锅的人</em>“的原则担起过官网项目和调漆项目.    </p><p>总结实现了<strong>10个以上</strong>需求,整改了<strong>85个以上</strong>优化项,修复了<strong>143个以上的bug</strong>.而且随着工作时长的增加,输出的质量和效率都有了飞跃的提升:-)  </p><p>但是在以上工作经验中接触的面越来越广,所需要的知识也越来越多和迫切.深感自己在很多方面的欠缺.这也是不断的在激励我不断学习不断成长</p><blockquote><p>落后就要挨打</p></blockquote><h2 id="反思与总结"><a href="#反思与总结" class="headerlink" title="反思与总结"></a>反思与总结</h2><h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><ul><li>成长不够多元</li><li>空闲时间利用不够合理  </li></ul><p>Q2的时候除了工作以外大部分时间都花在了六级复习和毕设的编写上.结果最后回学校的时候,由于论文规范完全不达标,相关设计和需求分析一点也不专业导致被老师骂惨了.  </p><p>这时候我才发现实习一年后其实我只学会如何代码打交道,接到一个明确的目的通过编程的方式实现.在软件工程其他方面所涉及的工作所知道还停留在学校里的水平.  </p><p>一直都坚持上班前和下班后花时间积累和成长,但也确实走了不少弯路,所需要使用的各种技术的书都看了很多,Demo也练习了不少.但是产出没有想象的大.</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul><li>职业规划越来清晰</li><li>在技术增强的道理上逐渐摸索出适合自己方法</li></ul><p>虽然踩了很多坑,可是慢慢的对于自己的职业规划越来越清晰明了.</p><ol><li>作为一个应届生码农应该如何成长?</li><li>工作和个人能力应该如何实现互相促进的效果?</li><li>短期内的目标和规划是什么?</li></ol><p>这些问题都慢慢都开始有了自己的答案  </p><p>且在工作和学习的过程,本学渣也逐渐懂得了如何用有效率和投入的方式来学习,而且懂得了如何平衡工作和学习还有生活三者.</p><h2 id="未来展望"><a href="#未来展望" class="headerlink" title="未来展望"></a>未来展望</h2><ul><li>承担更多职责锻炼自己<br>  方案:  <ul><li>任务分工时勇于承担和尝试</li><li>敢于接触陌生的领域</li></ul></li><li>保持求知欲<br>  方案:  <ul><li>坚持业余时间学习</li><li>定制每周写<a href="http://halu886.github.io/" target="_blank" rel="noopener">技术博客</a>计划</li></ul></li></ul><p>在工作中懂得了一个比较深刻的道理</p><blockquote><p>黑猫白猫能抓耗子就是好猫  </p></blockquote><p>无论知道多少理论和知识,不能及时合理的实现功能就是白搭.<br>只有在实践中才能检验个人能力.<br>所以希望在以后的工作生涯中全身心的投入到具体工作中,别出现本末倒置的情况.  </p><p>只有不断的成长才能不被淘汰,自制是通往幸福的唯一通道,共勉~</p>]]></content>
       
+      <categories>
+          
+          <category> 工作 </category>
+          
+          <category> 经验总结 </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -27,6 +35,14 @@
       <url>/2018/06/26/JavaScript%E5%8E%9F%E7%94%9F%E5%87%BD%E6%95%B0%E6%B5%85%E8%B0%88/</url>
       <content type="html"><![CDATA[<blockquote><p><strong>该文章阅读需要8分钟,更多文章请点击本人博客<a href="https://halu886.github.io/" target="_blank" rel="noopener">halu886</a></strong></p></blockquote><hr><!-- TOC --><ul><li><a href="#1原生函数基本概念">1.原生函数基本概念</a><ul><li><a href="#11原生函数是什么">1.1原生函数是什么</a></li><li><a href="#12作用是什么">1.2作用是什么</a></li><li><a href="#13补充">1.3补充</a></li></ul></li><li><a href="#2\\class\\">2.[[<strong>class</strong>]]</a></li><li><a href="#3封装对象包装">3.封装对象包装</a></li><li><a href="#4拆封">4.拆封</a></li></ul><!-- /TOC --><h1 id="1-原生函数基本概念"><a href="#1-原生函数基本概念" class="headerlink" title="1.原生函数基本概念"></a>1.原生函数基本概念</h1><h2 id="1-1原生函数是什么"><a href="#1-1原生函数是什么" class="headerlink" title="1.1原生函数是什么"></a>1.1原生函数是什么</h2><p><strong>JavaScript为基本数据类型提供了封装对象,被称为原生函数(native function),同时也叫内建函数(built-in function)</strong>  </p><p>常用的原生函数有:</p><ul><li>Number()</li><li>String()</li><li>Boolean()</li><li>Array()</li><li>Object()</li><li>Function()</li><li>RegExp()</li><li>Date()</li><li>Error()</li><li>Symbol()//ES6新加入!   </li></ul><h2 id="1-2作用是什么"><a href="#1-2作用是什么" class="headerlink" title="1.2作用是什么"></a>1.2作用是什么</h2><p><strong>为基本数据类型提供该子类所特有的方法和属性</strong>  </p><pre><code>比如说:String#trim(),Array#Array#concat()  </code></pre><h2 id="1-3补充"><a href="#1-3补充" class="headerlink" title="1.3补充"></a>1.3补充</h2><p>原生函数同时也能当做构造函数使用  </p><pre><code>let a = new String(&quot;abc&quot;);a instanceof String;//true</code></pre><p>通过构造函数创建了一个封装了基本数据类型的封装对象</p><h1 id="2-class"><a href="#2-class" class="headerlink" title="2.[[class]]"></a>2.[[<strong>class</strong>]]</h1><pre><code>let a = new String(&quot;abc&quot;);typeof a;//&quot;object&quot; </code></pre><p><strong>所有typeof返回的”object”的对象都有一个[[class]]属性</strong>  </p><pre><code>Object.prototype.toString.call(new String(&quot;abc&quot;));//&quot;[object String]&quot;Object.prototype.toString.call(new Number(1346));//&quot;[object Number]&quot;Object.prototype.toString.call(null);//&quot;[object Null]&quot;Object.prototype.toString.call(undefined);//&quot;[object Undefined]&quot;//返回一个字符串类型的基本类型数据,格式为[object Xxxxx]</code></pre><p>虽然不存在Null()和Undefined()原生函数,但是[[Class]]内部属性仍为这个</p><h1 id="3-封装对象包装"><a href="#3-封装对象包装" class="headerlink" title="3.封装对象包装"></a>3.封装对象包装</h1><p><strong>当基本数据类型需要调用原生对象的方法和属性时,JavaScript会自动进行对象封装(object wrapper)</strong>  </p><p><strong>疑问:既然如此为什么不直接在变量声明时,直接定义为封装对象?</strong></p><p><strong>思考:</strong></p><ol><li>JavaScript对基本数据类型的常见情况做了性能优化,直接使用封装对象来进行”<em>提前优化</em>“反而会降低执行效率</li><li><p>篡改数据类型,提升风险  </p><pre><code>let a = false;!!false;//falselet b = new Boolean(false);!!b;//true  //显性类型转换!!Object===&gt;true  </code></pre></li></ol><h1 id="4-拆封"><a href="#4-拆封" class="headerlink" title="4.拆封"></a>4.拆封</h1><p><strong>当需要用到封装对象的基本类型值时,就需要用到valueOf()</strong>  </p><pre><code>var a = new String(&quot;sadflk&quot;);var b = new Number(123);var c = new Boolean(true);a.valueOf()//&quot;sadflf&quot;b.valueOf()//123c.valueOf()//true</code></pre><p><strong>在需要用到基本类型值的时候会发生隐形拆封</strong></p>]]></content>
       
+      <categories>
+          
+          <category> JavaScript </category>
+          
+          <category> 阅后总结 </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -45,6 +61,14 @@
       <link href="/2017/08/25/%E6%84%8F%E8%A7%81%E5%AE%A1%E6%9F%A5Demo-%E6%80%BB%E7%BB%93/"/>
       <url>/2017/08/25/%E6%84%8F%E8%A7%81%E5%AE%A1%E6%9F%A5Demo-%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<!-- TOC --><ul><li><a href="#技术说明">技术说明</a><ul><li><a href="#mongodb">mongodb</a></li><li><a href="#nodejs">nodejs</a></li><li><a href="#webix">webix</a></li></ul></li></ul><!-- /TOC --><h1 id="技术说明"><a href="#技术说明" class="headerlink" title="技术说明"></a>技术说明</h1><h2 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h2><p>一张用户表user,一张数据表idea（意见）。</p><pre><code>//user表数据字段userName: String,//用户名称password: String //登入密码idea表数据字段productType: String, //产品类型headLine: String,  //标题phoneNum: String,  //联系方式status: String,    //状态 已回复/未回复/已完成reply: String,      //回复publishDate: Date,  //发布日期replyDate: Date,    //回复日期fileName: Array,    //图片名称filePath: Array,    //文件路径user_id: String    //引用用户ID</code></pre><p>mongodb 对象的操作用了mongoose模块封装了CURD操作</p><h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><p>基于node.js中express模块搭建http服务<br>监听本地localhost：3000端口访问</p><p><strong>使用express4.x中的router中间件将请求分离成/user/以及/idea/.<br>将app.js中的请求转移到了./router/index.js</strong></p><pre><code>module.exports=function(app) {        /**主界面 */            app.get(&apos;/&apos;,index);//主页面请求            app.use(&apos;/user&apos;,user);//用户模块            app.use(&apos;/idea&apos;,idea);//意见模块        }</code></pre><p>在app.js只需要调用./router/index模块，就可以减少主界面请求的代码量<br><code></code>var index = require（./router/index）;<br>index(app);</p><p><strong>分别封装user和idea业务逻辑在模块中实例化express.router对象 ./router/idea.js ./router/idea.js</strong></p><pre><code>var router=require(&quot;express&quot;).Router();</code></pre><p><strong>在对外开放router对象</strong><br>    module.exports=router;</p><p><strong>mongoose封装对于对象的CURD操作<br>首先我先封装db数据库连接对象的创建</strong><br>    var mongoose=require(‘mongoose’);<br>    var url=’mongodb://localhost:27017/demo’;<br>    mongoose.connect(url);//连接<br>    module.exports=mongoose;</p><p>通过mongoose中封装好的scheme对象将我们数据字段封装好，通过model对象实例化，再导出包含一系列查询以及增加删除等等的操作的对象，简直就是开箱即用。</p><pre><code>var mongoose=require(&apos;./mongoose&apos;);var ideaSchema=new mongoose.Schema({   //Schema对象封装        /* idea数据字段*/});//idea对应的mongodb中的collection，传入Schema对象，将返回model对象对外开放module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)</code></pre><h2 id="webix"><a href="#webix" class="headerlink" title="webix"></a>webix</h2><p><strong>在ejs渲染引擎下使用webix控件</strong></p><p><em>这一部份代码讲道理写得我有点蒙 = =<br>ejs通过渲染表达式动态传递值或者对html页面进行一些操作<br>然而webix就是通过封装控件，在js中传递json对象进行构造html中的节点<br>公司当时说要webix，我又脑子抽到了不愿意舍弃ejs（简直有毒，在这个demo里ejs的唯一作用就是将我conter内容整合到layout里面）。<br>为了能让ejs稍微有点作用，我在layout界面中写了构建页面中比较不容易改动的top和footer部分。<br>对你没想错，写在html内置的js中的，然后从不同的界面中传进去各自内置的js（因为webix主要的优势就是让你不用写html代码），所以ejs<code></code>最后整合到的一起的页面就是两个不同js脚本。感觉ejs在我这里基本没有作用<br>前端主要就是通过不同的控件构造一个个不同的页面加上一些按钮的触发事件发送webix中封装的ajax提交请求<br>代码我就不贴了，源码链接我也放出来了，有兴趣就自己去看看吧</em></p>]]></content>
+      
+      <categories>
+          
+          <category> node </category>
+          
+          <category> demo </category>
+          
+      </categories>
       
       
         <tags>
@@ -77,16 +101,16 @@
     </entry>
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
