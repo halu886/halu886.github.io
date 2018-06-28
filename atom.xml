@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-26T12:00:38.919Z</updated>
+  <updated>2018-06-28T07:00:52.508Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>实习总结</title>
+    <link href="http://yoursite.com/2018/06/28/%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/06/28/实习总结/</id>
+    <published>2018-06-28T01:18:32.000Z</published>
+    <updated>2018-06-28T07:00:52.508Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;该文章阅读需要12分钟,更多文章请点击本人博客&lt;a href=&quot;https://halu886.github.io/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="个人" scheme="http://yoursite.com/tags/%E4%B8%AA%E4%BA%BA/"/>
+    
+      <category term="工作" scheme="http://yoursite.com/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+      <category term="感悟" scheme="http://yoursite.com/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>意见审查Demo 总结</title>

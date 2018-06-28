@@ -102,15 +102,15 @@
   <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
   <ul id="menu">
     
-    <li><a href="/">首页</a></li>
+    <li><a href="/">Home</a></li>
     
-    <li><a href="/archives/">归档</a></li>
+    <li><a href="/archives/">Archives</a></li>
     
-    <li><a href="/categories/">分类</a></li>
+    <li><a href="/categories/">Categories</a></li>
     
-    <li><a href="/tags/">标签</a></li>
+    <li><a href="/tags/">Tags</a></li>
     
-    <li><a href="/about/">关于</a></li>
+    <li><a href="/about/">About</a></li>
     
   </ul>
 </nav>
@@ -226,18 +226,18 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
   
 <div class="reward" id="reward">
   <p>坚持原创技术分享，您的支持是我前进的动力！</p>
-  <button id="reward-button" class="button" disable="enable">打赏</button>
+  <button id="reward-button" class="button" disable="enable">Reward</button>
   <div id="qr" class="qr" style="display: none;">
     
     <div id="wechat">
-      <img id="wechat_qr" src="/images/WeChatPay.png" alt="微信支付"/>
-      <span>微信支付</span>
+      <img id="wechat_qr" src="/images/WeChatPay.png" alt="WechatPay"/>
+      <span>WechatPay</span>
     </div>
     
     
     <div id="alipay">
-      <img id="alipay_qr" src="/images/AliPay.png" alt="支付宝"/>
-      <span>支付宝</span>
+      <img id="alipay_qr" src="/images/AliPay.png" alt="AliPay"/>
+      <span>AliPay</span>
     </div>
     
     
@@ -280,8 +280,8 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
       "repo": "halu886.github.io",
       "client_id": "26b2e6dd9e2a06288363",
       "client_secret": "e7c07a72947f6e214bda7f4d686368262cf4bcc9",
-      "no_comment": "这个页面还没有评论，现在就去评论吧！",
-      "go_to_comment": "去评论",
+      "no_comment": "This page has no comment, go to comment now!",
+      "go_to_comment": "Go to Comment",
       "issue_title": "意见审查Demo 总结",
       "btn_class": "button",
       "comments_target": "#comment-thread"
@@ -320,7 +320,7 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -335,8 +335,8 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
   <div class="site-count">
     
     <div class="archives-count">
-      <div class="site-count-title">归档</div>
-      <div><a href="/archives/">3</a></div>
+      <div class="site-count-title">Archives</div>
+      <div><a href="/archives/">4</a></div>
     </div>
     
     
@@ -344,7 +344,7 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
     <span class="site-count-divider divider">|</span>
     
     <div class="categories-count">
-      <div class="site-count-title">分类</div>
+      <div class="site-count-title">Categories</div>
       <div><a href="/categories/">0</a></div>
     </div>
     
@@ -353,8 +353,8 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
     <span class="site-count-divider divider">|</span>
     
     <div class="tags-count">
-      <div class="site-count-title">标签</div>
-      <div><a href="/tags/">5</a></div>
+      <div class="site-count-title">Tags</div>
+      <div><a href="/tags/">8</a></div>
     </div>
     
   </div>
@@ -375,7 +375,7 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
 
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
-  <div><i class="fas fa-list-ol"></i>文章目录</div>
+  <div><i class="fas fa-list-ol"></i>Table of Contents</div>
   <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#技术说明"><span class="toc-text">技术说明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#mongodb"><span class="toc-text">mongodb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nodejs"><span class="toc-text">nodejs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webix"><span class="toc-text">webix</span></a></li></ol></li></ol></div>
 </div>
 
@@ -386,7 +386,7 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
     
 <hr>
 <div class="social-link sidebar-item">
-  <div><i class="far fa-address-card"></i>社交链接</p></div>
+  <div><i class="far fa-address-card"></i>Social Links</p></div>
   <ul>
     
     <li><i class="fas fa-envelope"></i><a href="halu886@qq.com" target="_blank">E-Mail</a></li>
@@ -404,7 +404,7 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
     
 <hr>
 <div class="blogroll sidebar-item">
-  <div><i class="fas fa-link"></i>友情链接</div>
+  <div><i class="fas fa-link"></i>Blogroll</div>
   <ul>
     
     <li><a href="https://github.com/" target="_blank">GitHub</a></li>
@@ -453,7 +453,7 @@ module.exports=mongoose.model(&apos;idea&apos;,ideaSchema)
           
         </div>
         <div class="powered-by">
-          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>

@@ -1,4 +1,6 @@
-.main,
+.main {
+  font: 18px "Roboto", "Noto Sans", Helvetica, Arial, sans-serif;
+}
 .container {
-  font: 20px "Roboto", "Noto Sans", Helvetica, Arial, sans-serif;
+  font: 18px "Roboto", "Noto Sans", Helvetica, Arial, sans-serif;
 }
