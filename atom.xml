@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-28T07:38:56.682Z</updated>
+  <updated>2018-07-06T06:38:20.089Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[置顶]blog迁移至阿里云服务器</title>
+    <link href="http://yoursite.com/2018/07/06/%E7%BD%AE%E9%A1%B6-gitpage%E8%BF%81%E7%A7%BB%E8%87%B3%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>http://yoursite.com/2018/07/06/置顶-gitpage迁移至阿里云服务器/</id>
+    <published>2018-07-06T06:19:50.000Z</published>
+    <updated>2018-07-06T06:38:20.089Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;自2018-7-6号起，基于gitpage搭建个人blog迁置个人服务器&quot;&gt;&lt;a href=&quot;#自2018-7-6号起，基于gitpage搭建个人blog迁置个人服务器&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="通知" scheme="http://yoursite.com/tags/%E9%80%9A%E7%9F%A5/"/>
+    
+      <category term="置顶" scheme="http://yoursite.com/tags/%E7%BD%AE%E9%A1%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>闭包浅谈</title>
+    <link href="http://yoursite.com/2018/07/02/%E9%97%AD%E5%8C%85%E6%B5%85%E8%B0%88/"/>
+    <id>http://yoursite.com/2018/07/02/闭包浅谈/</id>
+    <published>2018-07-02T12:38:32.000Z</published>
+    <updated>2018-07-05T13:08:21.759Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;该文章阅读需要8分钟,更多文章请点击本人博客&lt;a href=&quot;http://halu886.cn:4000&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+    
+      <category term="阅后总结" scheme="http://yoursite.com/tags/%E9%98%85%E5%90%8E%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="你不知道的JavaScript(上卷)" scheme="http://yoursite.com/tags/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript-%E4%B8%8A%E5%8D%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>实习总结</title>

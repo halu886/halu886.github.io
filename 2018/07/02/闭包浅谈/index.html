@@ -47,6 +47,7 @@
     
     
 <link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
 
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <link rel="stylesheet" type="text/css" href="/css/solarized-light.css">
@@ -81,7 +82,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>关于 | halu886`blog - 天道酬勤</title>
+    <title>闭包浅谈 | halu886`blog - 天道酬勤</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn"  data-spy="scroll" data-target=".list-group">
     
@@ -109,7 +110,7 @@
     
     <li><a href="/tags/">标签</a></li>
     
-    <li><a href="/about/" class="current">关于</a></li>
+    <li><a href="/about/">关于</a></li>
     
   </ul>
 </nav>
@@ -124,20 +125,205 @@
         <div class="main-container">
           <div class="content">
             
-<div id="page-content" class="page-content">
-  <article class="page-article card animate">
-    <header class="page-header">
-      <h1 class="page-title" itemprop="name headline">
-        <span>关于</span>
-      </h1>
-    </header>
-    <main class="page-main">
-      <div class="page-container">
+<div id="post" class="post">
+  
+  <article class="post-container card animate" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/02/闭包浅谈/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="halu886">
+       <meta itemprop="description" content="call me "村村"">
+       <meta itemprop="image" content="/images/avatar.jpg">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="halu886`blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">闭包浅谈</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-07-02T20:38:32+08:00">2018-07-02 20:38:32</time></span>
+        </span>
+        
+        
+        
+        
         
       </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <blockquote>
+<p><strong>该文章阅读需要8分钟,更多文章请点击本人博客<a href="http://halu886.cn:4000" target="_blank" rel="noopener">halu886</a></strong></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>当函数可以记住并访问所在的词法作用域，即使是在当前作用域外执行，这时就产生了闭包. —–&lt;&lt;你不知道的JavaScript(上卷)&gt;&gt; </p>
+</blockquote>
+<!-- TOC -->
+<ul>
+<li><a href="#本质">本质</a></li>
+<li><a href="#回调闭包">“回调===闭包”</a></li>
+<li><a href="#循环和闭包">循环和闭包</a></li>
+</ul>
+<!-- /TOC -->
+<p><strong>闭包是基于词法作用域书写代码时所自然产生的结果.</strong></p>
+<h1 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h1><pre><code>function foo(){
+    var a = &apos;test&apos;;
+    function bar(){
+        console.log(a);
+    }
+    bar()//test;
+}
+</code></pre><p>由词法作用域概念我们可以将这段代码理解为foo()中存在一个<strong>作用域</strong>，bar()中存在一个词法<strong>作用域</strong>  </p>
+<p>foo作用域包含bar作用域，bar作用域被foo作用域包含.  </p>
+<p>且根据词法作用域可知对于变量的检索可以由当前作用域向上层作用域进行遍历直至顶层作用域.  </p>
+<pre><code>function foo(){
+    var a = &apos;test&apos;;
+    function bar(){
+        console.log(a);
+    }
+    return bar;
+}
+
+var baz = foo();
+baz();//test
+</code></pre><p>bar函数所含有的作用域引用了foo函数的作用域，且当执行foo()时，bar函数作为一个返回值返回，baz变量引用着词法作用域，当bar在全局作用域下执行时，bar指向的作用域既能访问foo指向的作用域，还能指向全局作用域.</p>
+<p>按照JavaScript引擎执行逻辑作用域在执行完后且没有被引用后就会被垃圾回收机制回收，但是当foo()方法执行完，baz依旧引用bar方法的作用域，那么foo()执行完后依旧存在引用，foo作用域将不会被回收.</p>
+<pre><code>var fn;
+function foo(){
+    var a = 2;
+    function bar(){
+        console.log(a);
+    }
+    fn = bar;
+}
+
+function baz(){
+    fn();
+}
+
+foo()
+
+baz()//2
+</code></pre><p><strong>只要作用域内部的子作用域被作用域外引用并执行就构成了闭包</strong></p>
+<h1 id="“回调-闭包”"><a href="#“回调-闭包”" class="headerlink" title="“回调===闭包”"></a>“回调===闭包”</h1><p>在jquery，定时器，触发事件等等中大量的第三方API存在回调函数，比方说:  </p>
+<pre><code>function fn(message){
+    setTimeout(function time(){ //回调===闭包
+        console.log(message);
+    }，1000)
+}
+
+fu(&apos;test&apos;)//test
+</code></pre><p>在大部分（<em>几乎所有</em>）的第三方API中的回调都属于闭包(<em>在作用外执行方法</em>)</p>
+<h1 id="循环和闭包"><a href="#循环和闭包" class="headerlink" title="循环和闭包"></a>循环和闭包</h1><p>在关于大部分闭包的思考中，都会提到循环和传入定时器中闭包所产生的问题  </p>
+<pre><code>for(var i=0;i&lt;5;++i){
+    setTimeout(function(){
+        console.log(i);
+    }，1000);
+}
+//5
+//5
+//5
+//5
+//5
+</code></pre><p>首先我们得先理解<strong>定时器中回调函数执行的时刻是在for循环结束后</strong>，那么向事件循环中设置的五个匿名函数是for循环遍历完后才执行的。  </p>
+<p>根据之前我们梳理的概念，匿名函数所指向的作用域能够访问上一级的作用域，此时上一级的作用域的i变量指向常量5.</p>
+<p><strong>那么问题来了?</strong><br>如何达到我们想要的效果，每次输出植入定时器是循环索引?  </p>
+<p><strong>方法1</strong>:  </p>
+<pre><code>//作用域a
+for(var i=0;i&lt;5;++i){
+    (function(){
+        //作用域b
+        var j = i;
+        setTimeout(function(){
+            //作用域c
+            console.log(j);
+        }，1000);
+    })();
+}
+//0
+//1
+//2
+//3
+//4
+</code></pre><p>这里我们用的思路是嵌套一层作用域进行保存索引i。遍历五次后，<strong>多生成</strong>五个作用域b，里面分别保存各次遍历时的索引i(定义一个新变量j指向索引常量).  </p>
+<p>当回调执行时先在作用域c寻找变量j，没有得到时，再去上一层作用域b，找到了后停止向上遍历，输出j。</p>
+<p><strong>方法2</strong>:  </p>
+<pre><code>//作用域a
+for(let i = 0;i&lt;5;++i){//es6语法let关键字
+    //作用域b
+    setTimeout(function(){
+        //作用域c
+        console.log(j);
+    }，1000);
+}
+//0
+//1
+//2
+//3
+//4
+</code></pre><p>这里运用了es6中的let关键字，生成块级作用域本质上和方法一同理，这里不再赘述.</p>
+<p>以上就是对闭包的总结，大部分js中模式都风骚的运用了闭包的特性。更多知识建议阅读《你不知道的JavaScript》</p>
+
     </main>
-    <footer class="page-footer"></footer>
+    <footer class="post-footer">
+      
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/JavaScript/" style="background: #fc6423;" rel="tag"><i class="fas fa-tags"></i>JavaScript</a>
+        
+        <a class="post-tag button" href="/tags/阅后总结/" style="background: #a3bb54;" rel="tag"><i class="fas fa-tags"></i>阅后总结</a>
+        
+        <a class="post-tag button" href="/tags/你不知道的JavaScript-上卷/" style="background: #47aaff;" rel="tag"><i class="fas fa-tags"></i>你不知道的JavaScript(上卷)</a>
+        
+      </div>
+      
+    </footer>
   </article>
+  
+  
+<div class="reward" id="reward">
+  <p>坚持原创技术分享，您的支持是我前进的动力！</p>
+  <button id="reward-button" class="button" disable="enable">打赏</button>
+  <div id="qr" class="qr" style="display: none;">
+    
+    <div id="wechat">
+      <img id="wechat_qr" src="/images/WeChatPay.png" alt="微信支付"/>
+      <span>微信支付</span>
+    </div>
+    
+    
+    <div id="alipay">
+      <img id="alipay_qr" src="/images/AliPay.png" alt="支付宝"/>
+      <span>支付宝</span>
+    </div>
+    
+    
+  </div>
+</div>
+
+
+  
+  
+  <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+      
+      <a href="/2018/06/28/实习总结/" rel="next" title="实习总结"><i class="fas fa-angle-left"></i><span class="nav-title">实习总结</span></a>
+      
+    </div>
+    <div class="post-nav-prev post-nav-item">
+      
+      <a href="/2018/07/06/置顶-gitpage迁移至阿里云服务器/" rel="prev" title="[置顶]blog迁移至阿里云服务器"><span class="nav-title">[置顶]blog迁移至阿里云服务器</span><i class="fas fa-angle-right"></i></a>
+      
+    </div>
+  </div>
+  
   
   
 
@@ -160,7 +346,7 @@
       "client_secret": "e7c07a72947f6e214bda7f4d686368262cf4bcc9",
       "no_comment": "这个页面还没有评论，现在就去评论吧！",
       "go_to_comment": "去评论",
-      "issue_title": "关于",
+      "issue_title": "闭包浅谈",
       "btn_class": "button",
       "comments_target": "#comment-thread"
     });
@@ -245,6 +431,20 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+
+
+
+
+<hr>
+<div class="post-toc sidebar-item" id="toc-div">
+  <div><i class="fas fa-list-ol"></i>文章目录</div>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#本质"><span class="toc-text">本质</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#“回调-闭包”"><span class="toc-text">“回调===闭包”</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#循环和闭包"><span class="toc-text">循环和闭包</span></a></li></ol></div>
+</div>
+
+
+
     
     
     
